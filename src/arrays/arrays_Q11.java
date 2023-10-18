@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.Scanner;
 
 public class arrays_Q11 {
@@ -19,11 +21,13 @@ public class arrays_Q11 {
         double sum2 = 0;
         double devi ;
         double a;
+        double k =0;
+        double mean2=mean(x);
         for (int i = 0; i < x.length; i++) {
-            double k = Math.pow((x[i] - mean(x)), (x[i] - mean(x)));
+             k = (x[i] - mean2)* (x[i] - mean2);
             sum2+=k;
         }
-        a = sum2 / (x.length - 1);
+        a = sum2 / (9);
         devi = Math.sqrt(a);
 
         return devi;
